@@ -1,0 +1,23 @@
+<div class="row featured-section">
+  <div class="col-12 p-0" style="background: url(<%= @article.image %>) center no-repeat; background-size: cover;">
+    <div class="gradient" href="#"></div>
+    <div class="featured-info pl-3 pb-2">
+      <%= link_to @article.title, article_path(@article), class: "font-weight-bold acumin-color position-relative" %>
+      <p class="text-white position-relative"><%= @article.text.truncate(10) %></p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <% @categories.each do |category| %>
+
+  <div class="col-6 col-md-3" style="background: url(<%= category.articles.last.image %>) center no-repeat; background-size: cover;">
+    <div class="gradient" href="#"></div>
+    <div class="category-title text-white font-weight-bold pt-2">
+      <%= link_to category.name, category_path(category), class: "text-white position-relative" %>
+    </div>
+    <div class="recent-article font-weight-bold text-white pb-2">
+      <%= link_to category.articles.last.title, article_path(category.articles.last), class: "text-white position-relative" %>
+    </div>
+  </div>
+  <% end %>
+</div>

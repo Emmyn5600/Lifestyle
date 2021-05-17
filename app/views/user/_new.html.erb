@@ -1,0 +1,24 @@
+<div class="container-fluid welcome-form">
+  <div class="row h-100">
+    <%= form_for(@user, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
+        <% @user.errors.full_messages.each do |error| %>
+        <div class="alert alert-danger">
+          <%= error %>
+        </div>
+        <% end %>
+        <div class="p-3">
+          <strong><%= f.label :name, "Name" %></strong><br />
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                @
+              </div>
+            </div>
+            <%= f.text_field :name, placeholder: "eg. dave", class: 'form-control' %><br>
+          </div>
+        </div>
+        <%= f.submit 'Sign Up', {:class => 'w-100 text-center text-uppercase bg-acumin-color p-3 text-white'} %>
+    <% end %>
+
+  </div>
+</div>
