@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+$orange: #fd7e14;
+
+.start {
+  background: #2b2b35;
+  background-image: url("/app/assets/images/bal5.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: acumin-pro, sans-serif;
+  overflow-x: hidden;
+}
+
+.lifestyle {
+  text-decoration: none;
+  color: #4e443e;
+}
+
+.lifestyle::after {
+  content: ".";
+  font-size: 30px;
+  color: $orange;
+}
+
+.button-signin {
+  background-color: $orange;
+}
