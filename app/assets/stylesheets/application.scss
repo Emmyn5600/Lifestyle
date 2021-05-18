@@ -105,6 +105,14 @@ ul {
   list-style-type: none;
 }
 
+.user-btn {
+  margin-left: 300px;
+}
+
+.user-btn a:hover {
+  color: #fd6000;
+}
+
 .start {
   background: #2b2b35;
   background-image: url("/app/assets/images/bal5.jpg");
@@ -116,7 +124,8 @@ ul {
 
 .lifestyle {
   text-decoration: none;
-  color: #4e443e;
+  color: #837f7b;
+  margin-left: 20px;
 }
 
 .lifestyle::after {

@@ -48,10 +48,10 @@
           </li>
           <% else %>
           <li class="nav-item">
-            <%= link_to "Sign Up", new_user_path, class: "nav-link text-dark" %>
+            <%= link_to "Sign Up", new_user_path, class: "user-btn nav-link text-dark" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sign In", "/login", class: "nav-link text-dark" %>
+            <%= link_to "Sign In", "/login", class: "user-btn nav-link text-dark" %>
           </li>
           <% end %>
         </ul>
@@ -136,9 +136,7 @@
               <a href="nav-item">
                 Terms & conditions
               </a>
-              <p class="text-white">
-                Copyright 2014. All rights reserved
-              </p>
+            
             </li>
             <li class="nav-item col-12 col-md-4">
               <div class="row d-flex justify-content-end">
