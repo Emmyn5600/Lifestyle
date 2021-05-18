@@ -1,0 +1,15 @@
+<div class="col-md-8 main-content pt-5 m-auto">
+  <div class="row border bg-white rounded">
+    <div class="p-2 col-4 text-center">
+      <i class="far fa-user-circle"></i>
+    </div>
+    <div class="pt-2 pb-4 col-8">
+      <div class="user-info">
+        <p>David YAO</p>
+        <small>Posted <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</small>
+        <p><%= comment.body %></p>
+      </div>
+
+    </div>
+  </div>
+</div>
