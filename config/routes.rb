@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
-  get 'session/new'
+  root to: 'categories#index'
+
   resources :users, only: %i[new create]
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :articles, only: %i[new create show] do
+    resources :comments
+  end
+  
+  resources :categories, only: %i[new create show index]
+  get '/vote/:article_id' => 'votes#add_vote', as: :add_vote
+
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  get '/logout' => 'session#destroy'
 end

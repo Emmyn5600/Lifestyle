@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-    before_action :authorize, only: %i[index]
+    before_action :authenticate, only: %i[index]
   
     def index
       @categories = Category.order('priority ASC').includes(:articles).select do |e|

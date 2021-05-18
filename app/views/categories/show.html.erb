@@ -1,0 +1,24 @@
+<div class="row featured-section">
+  <% @category.articles.each do |article| %>
+  <div class="col-12 col-md-6 bg-white">
+    <div class="row h-100">
+      <div class="col-6" style="background: url(<%=article.image %>) center no-repeat; background-size: cover;">
+      </div>
+      <div class="col-6">
+        <div class="category-title-list text-dark font-weight-bold pt-2">
+          <h3 class="position-relative"><%= @category.name %></h3>
+        </div>
+        <div class="text-dark pb-2 pt-2">
+          <h5 class="position-relative font-weight-bold">
+            <%= link_to article.title, article_path(article) %>
+          </h5>
+          <p class="mt-3"><%=article.text.truncate(10) %></p>
+          <em>By <%= article.author.name %></em>
+          <%= show_votes?(article) %>
+          <%= handle_vote(article) %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
