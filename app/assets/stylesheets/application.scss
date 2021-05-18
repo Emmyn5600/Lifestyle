@@ -109,6 +109,12 @@ ul {
   margin-left: 500px;
 }
 
+.category-title a {
+  display: inline-block;
+  border-bottom: 3px solid #e9e711;
+  width: auto;
+}
+
 .user-btn a:hover {
   color: #fd6000;
 }
@@ -155,4 +161,14 @@ footer {
 
 .status {
   margin-top: 5rem;
+}
+
+.category-title-list h3 {
+  display: inline-block;
+  border-bottom: 3px solid #fd6000;
+  width: auto;
+}
+
+.recent-article {
+  padding-top: 7rem;
 }

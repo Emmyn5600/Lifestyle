@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
     def create
       @category = Category.new(category_params)
       if @category.save
-        flash.notice = 'Category created!'
+        flash.notice = 'Category created successfully!'
         redirect_to root_path
       else
         render :new
@@ -30,7 +30,7 @@ class CategoriesController < ApplicationController
     end
   
     def show
-      @category = Category.includes(articles: :author).find(params[:id])
+      @category = Category.includes(articles: :user).find(params[:id])
     end
   
     private
