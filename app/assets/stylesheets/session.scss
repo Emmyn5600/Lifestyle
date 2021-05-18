@@ -1,0 +1,28 @@
+// Place all the styles related to the session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.body {
+  background: radial-gradient(#40404b, #111118) rgba(34, 34, 40, 0.94);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  font-family: acumin-pro, sans-serif;
+  overflow-x: hidden;
+}
+
+.welcome-form {
+  margin-top: 10rem;
+}
+
+form img {
+  margin: -16px auto 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
