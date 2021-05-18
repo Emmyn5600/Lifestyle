@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'session/new'
+  resources :users, only: %i[new create]
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
