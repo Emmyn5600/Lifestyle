@@ -1,0 +1,41 @@
+<div class="container-fluid welcome-form">
+  <div class="row h-100">
+    <%= form_for(@article, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
+        <% @article.errors.full_messages.each do |error| %>
+        <div class="alert alert-danger">
+          <%= error %>
+        </div>
+        <% end %>
+
+        <div class="p-3">
+          <strong><%= f.label :title, "Title" %></strong><br />
+          <div class="form-group mb-2">
+
+            <%= f.text_field :title, class: 'form-control' %><br>
+          </div>
+        </div>
+        
+        <div class="p-3">
+          <strong><%= f.label :image, "Image link" %></strong><br />
+          <div class="form-group mb-2">
+
+            <%= f.url_field :image, class: 'form-control' %><br>
+          </div>
+
+          <strong><%= f.label :text, "Content" %></strong><br />
+          <div class="form-group mb-2">
+
+            <%= f.text_area :text, class: 'form-control' %><br>
+          </div>
+
+          <strong>Categories</strong><br />
+          <div class="form-group mb-2">
+            <%= f.collection_select(:category_ids, Category.all, :id, :name, {}, {:multiple => true, :class => 'form-control js-example-basic-multiple'}) %><br>
+          </div>
+
+        </div>
+        <%= f.submit 'Create article', {:class => 'w-100 text-center text-uppercase bg-acumin-color p-3 text-white'} %>
+    <% end %>
+
+  </div>
+</div>
