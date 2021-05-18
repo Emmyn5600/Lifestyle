@@ -6,9 +6,9 @@ class ArticlesController < ApplicationController
     end
 
     def create
-        @article = current_user.articles.build(articles_params)
+        @article = current_user.articles.build(article_params)
 
-        if articles.save
+        if @article.save
             flash.notice = 'Article created successfully!'
             redirect_to root_path
         else
@@ -24,8 +24,7 @@ class ArticlesController < ApplicationController
 
      private
 
-     def articles_params
-     params.require(:article).permit(:title, :image, :category_ids: [])
-     end
-
+     def article_params
+        params.require(:article).permit(:title, :text, :image, category_ids: [])
+      end
 end

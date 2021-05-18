@@ -1,0 +1,41 @@
+<div class="row featured-section">
+  <div class="col-12 p-0" style="background: url(<%= @article.image %>) center no-repeat; background-size: cover;">
+    <div class="gradient" href="#"></div>
+    <div class="featured-info pl-3 pb-2">
+      <h3 class="font-weight-bold acumin-color position-relative"><%= @article.title %></h3>
+    </div>
+  </div>
+</div>
+
+<div class="container content bg-white rounded article mt-3 mb-3">
+  <div class="row">
+    <p class="text-center col-12 mt-3">
+      <em>By <%= @article.author.name %></em>
+    </p>
+    <p class="col-12 mt-5 text-center">
+      <%= @article.text %>
+    </p>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12 text-center">
+      <%= show_votes?(@article) %>
+      <%= handle_vote(@article) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center mt-5">
+      <h6 class="font-weight-bold">Comments</h6>
+    </div>
+    <%= render partial: 'articles/comment', collection: @article.comments %>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <%= render partial: 'comments/form' %>
+    </div>
+  </div>
+</div>
