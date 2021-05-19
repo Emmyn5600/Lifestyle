@@ -134,12 +134,17 @@ ul {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   overflow-x: hidden;
   height: calc(100vh - 150.4px);
+  height: auto;
 }
 
 .lifestyle {
   text-decoration: none;
   color: #837f7b;
   margin-left: 20px;
+}
+
+.article-new {
+  padding-bottom: 200px;
 }
 
 .welcome-form {
@@ -170,7 +175,7 @@ ul {
 
 footer {
   padding: 1rem;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
