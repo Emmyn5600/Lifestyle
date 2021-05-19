@@ -1,13 +1,13 @@
 <div class="container-fluid welcome-form">
   <div class="row h-100">
-    <%= form_for(@user, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
+    <%= form_for(@user, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 user-form text-dark rounded'}) do |f| %>
         <% @user.errors.full_messages.each do |error| %>
         <div class="alert alert-danger">
           <%= error %>
         </div>
         <% end %>
         <div class="p-3">
-          <strong><%= f.label :name, "Name" %></strong><br />
+          <strong><%= f.label :name, "Create New Account" %></strong><br />
           <div class="input-group mb-2">
             <div class="input-group-prepend">
               <div class="input-group-text">

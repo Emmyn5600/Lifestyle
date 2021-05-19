@@ -15,7 +15,7 @@
   <body class="start">
   <header>
       <!-- desktop nav -->
-      <nav class="navbar navbar-expand-sm bg-white border-bottom fixed-top first-nav">
+      <nav class="navbar navbar-expand-sm border-bottom fixed-top first-nav">
           <ul class="navbar-nav flex-row align-items-center navbar-desktop">
             <li class="nav-item ml-3">
               <h3 class="fw-bold">
@@ -27,19 +27,19 @@
           
       <ul class="navbar-nav ml-auto align-items-center">
           <% if current_user %>
-          <li class="nav-item1">
-            <a href="/" class="home p-2  nav-link">
+          <li class="nav-item2">
+            <a href="/" class="home p-2 user-btn nav-link">
               Home
             </a>
           </li>
-          <li class="nav-item1">
-            <%= link_to "Create Article", new_article_path, class: "text-white p-2 button-sign rounded nav-link" %>
+          <li class="nav-item2">
+            <%= link_to "Create Article", new_article_path, class: "text-white p-2 user-btn button-sign rounded nav-link" %>
           </li>
-          <li class="nav-item1">
-            <%= link_to "Create Category", new_category_path, class: "category nav-link" %>
+          <li class="nav-item2">
+            <%= link_to "Create Category", new_category_path, class: "user-btn category nav-link" %>
           </li>
-          <li class="nav-item1 dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          <li class="nav-item2 dropdown">
+            <a class="nav-link " href="/logout" id="navbardrop" data-toggle="dropdown">
               <i class="user-logout far fa-user-circle"></i>
             </a>
             <div class="dropdown-menu">
@@ -48,10 +48,11 @@
           </li>
           <% else %>
           <li class="nav-item1">
-            <%= link_to "Sign Up", new_user_path, class: "user-btn nav-link text-dark" %>
-          </li>
-          <li class="nav-item1">
             <%= link_to "Sign In", "/login", class: "user-btn nav-link text-dark" %>
+          </li>
+
+          <li class="nav-item1">
+            <%= link_to "Sign Up", new_user_path, class: "user-btn nav-link text-dark" %>
           </li>
           <% end %>
         </ul>
@@ -129,10 +130,10 @@
               </h3>
             </li>
             <li class="nav-item col-12 col-md-4">
-              <a href="nav-item">
+              <a href="/">
                 Privacy Policy
               </a>
-              <a href="nav-item">
+              <a href="/">
                 Terms & conditions
               </a>
             
