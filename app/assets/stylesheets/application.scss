@@ -88,10 +88,6 @@ a:hover {
   color: #837f7b;
 }
 
-.nav-item a {
-  text-decoration: none;
-}
-
 ul {
   list-style-type: none;
 }
@@ -131,8 +127,21 @@ ul {
   background-color: $orange;
 }
 
+.featured-section {
+  margin-top: 4rem;
+}
+
+.featured-info {
+  padding-top: 10rem;
+}
+
+#page-container {
+  position: relative;
+  min-height: 150vh;
+}
+
 footer {
-  padding: 0.2rem;
+  padding: 1rem;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -180,4 +189,16 @@ footer {
 
 .cool {
   justify-content: space-between;
+}
+
+.cool1 {
+  background-color: red;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
