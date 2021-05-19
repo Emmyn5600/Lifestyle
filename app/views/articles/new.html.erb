@@ -1,6 +1,6 @@
 <div class="container-fluid welcome-form">
   <div class="row h-100">
-    <%= form_for(@article, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white article-new text-dark rounded'}) do |f| %>
+    <%= form_for(@article, :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
         <% @article.errors.full_messages.each do |error| %>
         <div class="alert alert-danger">
           <%= error %>

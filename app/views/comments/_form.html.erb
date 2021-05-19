@@ -1,4 +1,4 @@
-<%= form_for([ @article, @comment ], :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white text-dark rounded'}) do |f| %>
+<%= form_for([ @article, @comment ], :html => {:class => 'col-12 col-md-4 m-md-auto p-0 bg-white comment-form text-dark rounded'}) do |f| %>
   <% @comment.errors.full_messages.each do |error| %>
   <div class="alert alert-danger">
     <%= error %>
