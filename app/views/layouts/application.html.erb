@@ -27,30 +27,30 @@
           
       <ul class="navbar-nav ml-auto align-items-center">
           <% if current_user %>
-          <li class="nav-item">
-            <a href="/" class="p-2 text-dark nav-link">
+          <li class="nav-item1">
+            <a href="/" class="home p-2  nav-link">
               Home
             </a>
           </li>
-          <li class="nav-item">
-            <%= link_to "Create Article", new_article_path, class: "p-2 bg-acumin-color  rounded nav-link" %>
+          <li class="nav-item1">
+            <%= link_to "Create Article", new_article_path, class: "text-white p-2 button-sign rounded nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Create Category", new_category_path, class: "nav-link" %>
+          <li class="nav-item1">
+            <%= link_to "Create Category", new_category_path, class: "category nav-link" %>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item1 dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              <i class="far fa-user-circle"></i>
+              <i class="user-logout far fa-user-circle"></i>
             </a>
             <div class="dropdown-menu">
               <%= link_to "Logout", "/logout", class: "nav-link text-dark"%>
             </div>
           </li>
           <% else %>
-          <li class="nav-item">
+          <li class="nav-item1">
             <%= link_to "Sign Up", new_user_path, class: "user-btn nav-link text-dark" %>
           </li>
-          <li class="nav-item">
+          <li class="nav-item1">
             <%= link_to "Sign In", "/login", class: "user-btn nav-link text-dark" %>
           </li>
           <% end %>
@@ -122,7 +122,7 @@
         <%= yield %>
       </div>
 
-      <footer class="bg-acumin-gray-color container-fluid">
+      <footer class="footer-section container-fluid">
           <ul class="row">
             <li class="nav-item col-12 col-md-4">
               <h3 class="text-white font-weight-bold">
