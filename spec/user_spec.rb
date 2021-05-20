@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     described_class.new(name: 'test')
   end
 
-  describe 'Validations' do
+  describe '#Validations' do
     it 'is valid with valid attributes' do
       expect(subject).to be_valid
     end
