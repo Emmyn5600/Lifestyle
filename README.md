@@ -13,11 +13,11 @@
 
 ## Live Demo
 
-![Live Link](https://lifestyle01.herokuapp.com/login)
+[Live Link](https://lifestyle01.herokuapp.com/login)
 
 ## Loom Video
 
-![Watch](https://www.loom.com/share/20a6a37014d64d8c9aa4f163c14aa86d)
+[Watch](https://www.loom.com/share/20a6a37014d64d8c9aa4f163c14aa86d)
 
 ### Screenshot of the homepage
 ![screenshot](app/assets/images/img1.png)
