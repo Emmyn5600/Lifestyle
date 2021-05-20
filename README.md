@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-TBA
+![Live Link](https://lifestyle01.herokuapp.com/login)
 
 ### Screenshot of the homepage
 ![screenshot](app/assets/images/img1.png)
