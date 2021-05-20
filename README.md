@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-TBA
+![Live Link](https://lifestyle01.herokuapp.com/login)
 
 ### Screenshot of the homepage
 ![screenshot](app/assets/images/img1.png)
@@ -105,4 +105,4 @@ Thanks to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for her awes
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/Emmyn5600/Lifestyle/issues](issues/).
+Feel free to check the [issues/](https://github.com/Emmyn5600/Lifestyle/issues).
