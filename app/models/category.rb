@@ -5,5 +5,4 @@ class Category < ApplicationRecord
   validates :name, presence: true, length: { minimum: 5, maximum: 20 }, uniqueness: true
 
   validates :priority, presence: true, uniqueness: true
-  
 end
