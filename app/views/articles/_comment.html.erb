@@ -5,7 +5,7 @@
     </div>
     <div class="pt-2 pb-4 col-8">
       <div class="user-info">
-        <p><em>By <%= comment.user.name %></em></p>
+        <p><em>By <%= (comment.user.name) %></em></p>
         <small>Posted <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</small>
         <p><%= comment.body %></p>
       </div>

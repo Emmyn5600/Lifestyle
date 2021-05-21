@@ -1,5 +1,8 @@
 class ArticlesController < ApplicationController
-  def index; end
+  def index
+    @comment = Comment.all
+    @articles = @comment.articles.order_by_most_recent.includes([:user])
+  end
 
   def new
     @article = current_user.articles.build
