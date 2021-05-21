@@ -20,6 +20,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Share+Tech&display=swap');
 @import 'font-awesome.css';
+@import 'user.scss';
+@import 'categories.scss';
+@import 'comment.scss';
+@import 'articles.scss';
 
 html,
 body,
@@ -107,31 +111,6 @@ ul {
   min-height: 130vh;
 }
 
-.category-title a {
-  display: inline-block;
-  border-bottom: 3px solid #e9e711;
-  width: auto;
-}
-
-.user-btn {
-  color: $grey;
-  font-weight: 600;
-  line-height: 1.1em;
-  font-size: 0.8em;
-  padding: 0 0.5em;
-  border-left: $grey 2px solid;
-
-  &:hover {
-    color: $orange;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: $orange-flow 0 3px 2px -2px;
-    padding-bottom: 0.1em;
-  }
-}
-
 .start {
   background-image: url(/assets/back7.jpg);
   background-size: cover;
@@ -152,10 +131,6 @@ ul {
   padding-top: 50px;
 }
 
-.user-form {
-  background-color: #f5f5f5;
-}
-
 .lifestyle::after {
   content: ".";
   font-size: 30px;
@@ -172,10 +147,6 @@ ul {
 
 .featured-info {
   padding-top: 10rem;
-}
-
-.comment-form {
-  height: 40vh;
 }
 
 footer {
@@ -206,16 +177,6 @@ footer {
   margin-top: 5rem;
 }
 
-.category-title-list h3 {
-  display: inline-block;
-  border-bottom: 3px solid #fd6000;
-  width: auto;
-}
-
-.recent-article {
-  padding-top: 7rem;
-}
-
 .nav-item2 {
   margin-left: 200px;
 }
@@ -223,19 +184,10 @@ footer {
 .nav-item1 {
   margin-left: 400px;
 
-  .category {
-    color: #000;
-    font-family: acumin-pro, sans-serif;
-  }
-
   .home {
     color: #fd6000;
     font-family: acumin-pro, sans-serif;
   }
-}
-
-.user-logout {
-  color: #fd6000;
 }
 
 .cool {
