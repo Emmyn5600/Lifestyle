@@ -6,6 +6,7 @@
           <%= error %>
         </div>
         <% end %>
+       <div class="article_form">
 
         <div class="p-3">
           <strong><%= f.label :title, "Title" %></strong><br />
@@ -35,6 +36,7 @@
 
         </div>
         <%= f.submit 'Create article', {:class => 'w-100 text-center text-uppercase button-sign p-3 text-white'} %>
+        </div>
     <% end %>
 
   </div>

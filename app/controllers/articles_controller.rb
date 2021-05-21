@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
-    @comment = Comment.all
-    @articles = @comment.articles.order_by_most_recent.includes([:user])
+    @articles = Article.all
+    @articles = Article.includes([:user]).order('user_id DESC')
   end
 
   def new
@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.includes(:comments, :user).find(params[:id])
+    @article = Article.find(params[:id])
     @comment = Comment.new
     @comment.article_id = @article_id
   end
