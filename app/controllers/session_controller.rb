@@ -11,12 +11,14 @@ class SessionController < ApplicationController
       redirect_to root_path
     # If user's login doesn't work, send them back to the login form.
     else
+      flash.now.alert = 'Sorry, the user name is incorrect.'
+
       render :new
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/login'
+    redirect_to '/login', notice: "Goodbye! You're now logged out!"
   end
 end
