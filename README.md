@@ -17,7 +17,7 @@
 
 ## Loom Video
 
-[Watch](https://www.loom.com/share/20a6a37014d64d8c9aa4f163c14aa86d)
+[Watch](https://www.loom.com/share/e67d83097ea64105a5293fc574323dd2)
 
 ### Screenshot of the homepage
 ![screenshot](app/assets/images/img1.png)
