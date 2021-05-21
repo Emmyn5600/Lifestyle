@@ -8,12 +8,10 @@ class SessionController < ApplicationController
       # Save the user id inside the browser cookie. This is how we keep the user
       # logged in when they navigate around our website.
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to root_path, notice: 'Login Successfully.'
     # If user's login doesn't work, send them back to the login form.
     else
-      flash.now.alert = 'Sorry, the user name is incorrect.'
-
-      render :new
+      redirect_to '/login', notice: 'Sorry, the username is incorrect.'
     end
   end
 
