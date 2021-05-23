@@ -7,12 +7,12 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'database_cleaner'
-  gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3'
 end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
