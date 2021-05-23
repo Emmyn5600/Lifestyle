@@ -1,6 +1,6 @@
 # VisitRwanda
 
-> VisitRwanda is web app to write - read articles as well as vote about the latest the basketball Africa league(bal) and cycling shows that is happening in Rwanda. Simply log in to your account and start exploring.  This project consists of a simple session system with login and sign-up functionalities. You'll be redirected to the homepage where all categories will be displayed together with the most recent article written in that category. You can click the category section to browse all articles inside a single category. I also implemented a voting system for the articles where the user can vote just once for each article.
+> VisitRwanda is web app to write - read articles as well as vote about the latest news related to the events called basketball Africa league(bal) and cycling events that is happening in Rwanda. Simply log in to your account and start exploring.  This project consists of a simple session system with login and sign-up functionalities. You'll be redirected to the homepage where all categories will be displayed together with the most recent article written in that category. You can click the category section to browse all articles inside a single category. I also implemented a voting system for the articles where the user can vote just once for each article.
 
 ## Features
 
