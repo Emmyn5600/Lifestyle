@@ -32,3 +32,12 @@ $orange-flow: lightsalmon;
     padding-bottom: 0.1em;
   }
 }
+
+.jumbotron {
+  border-radius: 0 !important;
+}
+
+.main-jumbotron .weather-image {
+  width: 100%;
+  height: 470px;
+}

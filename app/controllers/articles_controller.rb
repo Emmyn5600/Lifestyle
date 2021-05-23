@@ -1,11 +1,24 @@
 class ArticlesController < ApplicationController
   def index
+    @categories = Category.all
     @articles = Article.all
-    @articles = Article.includes([:user]).order('user_id DESC')
+
+    cool = params[:cool]
+    @articles = if cool.nil?
+                  Article.all
+                else
+                  Article.where(category_id: cool)
+                end
+  end
+
+  def show
+    @article = Article.find(params[:id])
+    @comment = Comment.new
+    @comment.article_id = @article_id
   end
 
   def new
-    @article = current_user.articles.build
+    @article = Article.new
   end
 
   def create
@@ -17,12 +30,6 @@ class ArticlesController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
-    @article = Article.find(params[:id])
-    @comment = Comment.new
-    @comment.article_id = @article_id
   end
 
   private

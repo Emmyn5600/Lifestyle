@@ -15,30 +15,46 @@
   <body class="start">
   <header>
       <!-- desktop nav -->
-      <nav class="navbar navbar-expand-sm border-bottom fixed-top first-nav">
-          <ul class="navbar-nav flex-row align-items-center navbar-desktop">
-            <li class="nav-item ml-3">
-              <h3 class="fw-bold">
-                <a class="lifestyle acumin-gray-color" href="/">ViSitRwanda</a>
-              </h3>
-            </li>
-          </ul>
+     <nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark navheader main-nav">
+    <div class="container-fluid">
+        <div class="navbar-collapse collapse nav-content order-2">
+            <ul class="nav navbar-nav">
+                <%= link_to 'VISIT-RWANDA', root_path, class: 'nav-link logo' %>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
+          <li class="nav-item">
+            <%= link_to 'HOME', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'FASHION', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'BUSINESS', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'SPORTS', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'ENTERTAINMENT', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'MAGAZINE', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'TV', root_path, class: 'nav-link' %>
+          </li>
+        </ul>
+          <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
+          <ul class="ml-auto nav navbar-nav">
+             <% if current_user %>
+              <li class="nav-item dropdown">
+               <li class="nav-item2 d-flex m-2 mt-3">
+                 <%= link_to "Create Article", new_article_path, class: "text-white p-2 user-btn button-sign rounded nav-link" %>
 
-          
-      <ul class="navbar-nav ml-auto align-items-center">
-          <% if current_user %>
-          <li class="nav-item2">
-            <a href="/" class="home p-2 user-btn nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item2">
-            <%= link_to "Create Article", new_article_path, class: "text-white p-2 user-btn button-sign rounded nav-link" %>
-          </li>
-          <li class="nav-item2">
-            <%= link_to "Create Category", new_category_path, class: "user-btn category nav-link" %>
-          </li>
-          <li class="nav-item2 dropdown">
+                  <%= link_to "Create Category", new_category_path, class: "text-white p-2 user-btn button-sign rounded nav-link" %>
+                </li>
+          <ul class="ml-auto nav navbar-nav align-items-center">
             <a class="nav-link " href="/logout" id="navbardrop" data-toggle="dropdown">
               <i class="user-logout far fa-user-circle"></i>
             </a>
@@ -46,15 +62,15 @@
               <%= link_to "Logout", "/logout", class: "nav-link text-dark"%>
             </div>
           </li>
+          </div>
+          </div>
           <% else %>
-          <li class="nav-item1">
-            <%= link_to "Sign In", "/login", class: "user-btn nav-link text-dark" %>
-          </li>
-
-          <li class="nav-item1">
-            <%= link_to "Sign Up", new_user_path, class: "user-btn nav-link text-dark" %>
-          </li>
+         <%= link_to 'LOGIN', '/login', class: 'nav-link' %>
+                    <%= link_to 'REGISTER', new_user_path, class: 'nav-link' %>
           <% end %>
+            <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+            </li>
         </ul>
       </nav>
       <!-- mobile nav -->
@@ -107,12 +123,8 @@
                 <%= link_to "Logout", "/logout", class: "nav-link"%>
               </li>
               <% else %>
-              <li class="nav-item">
-                <%= link_to "Sign Up", new_user_path, class: "nav-link text-uppercase" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Sign In", "/login", class: "nav-link text-uppercase" %>
-              </li>
+              <%= link_to 'LOGIN', '/login', class: 'nav-link' %>
+                    <%= link_to 'REGISTER', new_user_path, class: 'nav-link' %>
               <% end %>
             </ul>
           </nav>

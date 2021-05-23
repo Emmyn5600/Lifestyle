@@ -32,6 +32,12 @@ gem 'rspec-rails', github: 'rspec/rspec-rails', branch: 'rails-6-1-dev'
   gem name, github: "rspec/#{name}", branch: 'main'
 end
 # Use Active Storage variant
+
+gem 'active_storage_validations'
+
+# AWS
+gem 'aws-sdk-s3', require: false
+
 # gem 'image_processing', '~> 1.2'
 
 # bullet for checking (N+1) problem

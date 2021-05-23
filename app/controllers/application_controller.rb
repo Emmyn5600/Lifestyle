@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def voted?(article)
-    current_user.voted_articles.exists?(article.id)
+    if current_user
+      current_user.voted_articles.exists?(article.id)
+    else
+      redirect_to '/login'
+    end
   end
   helper_method :voted?
 
