@@ -7,7 +7,8 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'sqlite3'
+  gem 'database_cleaner'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :production do
