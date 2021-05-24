@@ -29,7 +29,7 @@ test:
 
 production:
   <<: *default
-  database: lifestyle
-  username: postgres
-  password: microverse!
-  #DATABASE_URL: postgres://maooszevftisvl:7694e2271bee9e10ff689f2481766fa80e2e34ee694bb9c78ddfdaf117f6430a@ec2-34-206-8-52.compute-1.amazonaws.com:5432/db6pkgr4n2ha03
+    database: lifestyle
+    username: postgres
+    password: microverse!
+ 
