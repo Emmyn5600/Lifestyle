@@ -1,0 +1,43 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$orange: #fd7e14;
+$grey: grey;
+$orange-flow: lightsalmon;
+
+.category-title a {
+  display: inline-block;
+  border-bottom: 3px solid #e9e711;
+  width: auto;
+}
+
+.category {
+  color: #000;
+  font-family: acumin-pro, sans-serif;
+}
+
+.category-title-list h3 {
+  display: inline-block;
+  border-bottom: 3px solid #fd6000;
+  width: auto;
+}
+
+.user-btn {
+  color: $grey;
+  font-weight: 600;
+  line-height: 1.1em;
+  font-size: 0.8em;
+  padding: 0 0.5em;
+  border-left: $grey 2px solid;
+
+  &:hover {
+    color: $orange;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $orange-flow 0 3px 2px -2px;
+    padding-bottom: 0.1em;
+  }
+}

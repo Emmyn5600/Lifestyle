@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ViSitRwanda</title> 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="start">
+  <header>
+      <!-- desktop nav -->
+     <nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark bg-dark main-nav">
+    <div class="container-fluid">
+        <div class="navbar-collapse collapse nav-content order-2">
+            <ul class="nav navbar-nav">
+                <%= link_to 'VISIT-RWANDA', root_path, class: 'nav-link logo' %>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-2">
+          <li class="nav-item">
+            <%= link_to 'HOME', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'FASHION', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'BUSINESS', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'SPORTS', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'ENTERTAINMENT', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'MAGAZINE', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'TV', root_path, class: 'nav-link' %>
+          </li>
+        </ul>
+          <div class="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
+          <ul class="ml-auto nav navbar-nav">
+             <% if current_user %>
+              <li class="nav-item dropdown">
+               <li class="nav-item2 d-flex m-2 mt-3">
+                 <%= link_to "Create Article", new_article_path, class: "text-white p-2 user-btn button-sign rounded nav-link" %>
+
+                  <%= link_to "Create Category", new_category_path, class: "text-white p-2 user-btn button-sign rounded nav-link" %>
+                </li>
+          <ul class="ml-auto nav navbar-nav align-items-center">
+            <a class="nav-link " href="/logout" id="navbardrop" data-toggle="dropdown">
+              <i class="user-logout far fa-user-circle"></i>
+            </a>
+            <div class="dropdown-menu">
+              <%= link_to "Logout", "/logout", class: "nav-link text-dark"%>
+            </div>
+          </li>
+          </div>
+          </div>
+          <% else %>
+         <%= link_to 'LOGIN', '/login', class: 'nav-link' %>
+                    <%= link_to 'REGISTER', new_user_path, class: 'nav-link' %>
+          <% end %>
+            <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+            </li>
+        </ul>
+      </nav>
+     
+        </div>
+
+        <%= yield %>
+      </div>
+
+       </body>
+</html>

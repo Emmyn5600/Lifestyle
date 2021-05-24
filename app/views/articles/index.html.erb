@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-9 remove-padding">
+    <% @articles.order(id: :desc).limit(1).each do |article| %>
+      <div class="jumbotron main-jumbotron img-bg-fix" style="background-image: url(<%= article.image %>)">
+        <div class="main-index-text">
+          <p class="lead lead-title"><%= link_to article.title, article %></p>
+          <p class="body-text"><%= link_to truncate(article.text,:length => 150, :separator => ' '), article %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-3 remove-padding">
+    <div class="jumbotron weather-image">
+      <p class="lead nairobi text-white">Nairobi, Kenya.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <% @articles.order(id: :desc).limit(4).each do |article| %>
+    <div class="col-md-3 remove-padding">
+      <div class="jumbotron category-image" style="background-image: url(<%= article.image %>)">
+        <h3 class="category-title"><%= link_to article.category_ids, article_path(article.id) %></h3>
+        <h4 class="article-category-title"><%= link_to article.title, article_path(article.id) %></h4>
+      </div>
+    </div>
+  <% end %>
+</div>
