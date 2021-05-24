@@ -1,6 +1,5 @@
 class Article < ApplicationRecord
   belongs_to :user, class_name: 'User'
-  has_many_attached :images
   has_many :votes, foreign_key: :article_id
   has_many :voters, through: :votes, source: :user
   has_many :companies, foreign_key: :article_id, inverse_of: :article
